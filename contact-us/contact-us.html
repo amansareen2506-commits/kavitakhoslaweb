@@ -762,8 +762,22 @@ header img.kavita-khosla-parent3 {
       return;
     }
 
-    // Redirect to the thank you page
-    window.location.href = 'thank-you.html';
+    // Submit form data to Netlify via Fetch API
+    const formData = new FormData(form);
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString()
+    })
+    .then(() => {
+      // Redirect to the thank you page on success
+      window.location.href = 'thank-you.html';
+    })
+    .catch(error => {
+      console.error('Netlify Form submission error:', error);
+      // Fallback redirect so user experience isn't broken
+      window.location.href = 'thank-you.html';
+    });
   });
 })();
 </script>
