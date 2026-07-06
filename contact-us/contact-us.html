@@ -546,25 +546,26 @@ header img.kavita-khosla-parent3 {
               </div>
               <img class=group-icon3 loading=lazy alt src=/Group4.707992a2.svg?v=2030>
             </div>
-            <form id="enquiry-form" class=frame-parent9 novalidate>
+            <form id="enquiry-form" name="contact" method="POST" data-netlify="true" class=frame-parent9 novalidate>
+              <input type="hidden" name="form-name" value="contact" />
               <div class=frame-parent10>
                 <div class=first-name-wrapper>
-                  <input id="enq-first-name" class=first-name placeholder="First Name*" required>
+                  <input id="enq-first-name" name="first-name" class=first-name placeholder="First Name*" required>
                 </div>
                 <div class=first-name-wrapper>
-                  <input id="enq-last-name" class=first-name placeholder="Last Name*" required>
+                  <input id="enq-last-name" name="last-name" class=first-name placeholder="Last Name*" required>
                 </div>
               </div>
               <div class=frame-parent10>
                 <div class=first-name-wrapper>
-                  <input id="enq-phone" class=first-name placeholder="Phone Number*" required type="tel">
+                  <input id="enq-phone" name="phone" class=first-name placeholder="Phone Number*" required type="tel">
                 </div>
                 <div class=first-name-wrapper>
-                  <input id="enq-email" class=first-name placeholder="Email Address*" required type="email">
+                  <input id="enq-email" name="email" class=first-name placeholder="Email Address*" required type="email">
                 </div>
               </div>
               <div class=your-message-wrapper>
-                <textarea id="enq-message" class=your-message placeholder="Your Message*" required style="width:100%;min-height:100px;background:transparent;border:none;border-bottom:1px solid #08201a;font-family:inherit;font-size:inherit;color:inherit;resize:vertical;outline:none;padding:8px 0;box-sizing:border-box;"></textarea>
+                <textarea id="enq-message" name="message" class=your-message placeholder="Your Message*" required style="width:100%;min-height:100px;background:transparent;border:none;border-bottom:1px solid #08201a;font-family:inherit;font-size:inherit;color:inherit;resize:vertical;outline:none;padding:8px 0;box-sizing:border-box;"></textarea>
               </div>
               <button id="enq-submit" class=cta-primary type="submit" disabled style="opacity:0.5;cursor:not-allowed;transition:opacity 0.3s;">
                 <div class=explore-now>SEND ENQUIRY</div>
